@@ -1,0 +1,282 @@
+/* Order in rules:
+1. Positioning
+2. Box model
+3. Typography
+4. Visuals
+5. Others
+*/
+
+:root{
+	--main-font:'DM Sans', sans-serif;
+	--sec-font:'Inter', sans-serif;
+	--light:300;
+	--regular:400;
+	--medium:500;
+	--bold:700;
+	--background:#E5E5E5;
+	--linear-gradient:207.8deg, #201E1C 16.69%, #F7931A 100%;
+	--bitcoin-orage:#F7931A;
+	--soft-orange:#FFE9D5;
+	--secondary-blue:#FFE9D5; 
+	--soft-blue:#E7F5FF;
+	--warm-black:#201E1C;
+	--warm-blackplus1:#282623;
+	--gray: #B5B0AC;
+	--off-white:#FAF8F7;
+	--just-white:#FFFFFF;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 320px;
+  height: 334px;
+  text-align: center;
+  background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+header img {
+  width: 150px;
+  height: 24px;
+  margin-top: 50px;
+  align-self: center;
+  /* margin-top: 60px; */
+}
+.header__title-container {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  height: 218px;
+  margin-top: 33px;
+  text-align: center;
+  align-self: center;
+}
+.header__title-container h1 {
+  font-size: 2.4rem;
+  font-weight: var(--bold);
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+.header__title-container p {
+  margin-top: 24px;
+  font-size: 1.4rem;
+  font-weight: var(--medium);
+  line-height: 1.8rem;
+  color: var(--soft-orange);
+}
+.header__title-container .header__button {
+  position: absolute;
+  /* top: 290px; */
+  top: calc(100% - 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  padding: 16px 16px 12px 16px;
+  width: 229px;
+  height: 48px;
+  background-color: var(--off-white);
+  /* shadow */
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: var(--bold);
+  text-decoration: none;
+  color: var(--warm-blackplus1);
+}
+.header__button span {
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  margin-left: 14px;
+  background-image: url('../assets/icons/down-arrow.svg');
+}
+
+main {
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  background-color: var(--off-white);
+}
+
+.exchange-container {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.exchange-container__title {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.exchange-container .exchange-container__img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  background-image: url('../assets/imgs/bitcoin.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background: url('../assets/imgs/bitcoin.svg') center/cover no-repeat; */
+}
+.exchange-container .exchange-container__title h2 {
+  margin-bottom: 24px;
+  font-size: 2.4rem;
+  font-weight: var(--bold);
+  line-height: 2.6rem;
+  color: var(--warm-blackplus1);
+}
+.exchange-container .exchange-container__title p {
+  font-size: 1.4rem;
+  font-weight: var(--medium);
+  line-height: 1.6rem;
+  color: #757575;
+  margin-bottom: 48px;
+}
+
+.currency {
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.currency__table,
+.comissions__table {
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: 360px;
+  /* height: 360px; propuesto */
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+.currency__table .currency__title,
+.comissions__table .comissions__title {
+  margin-bottom: 14px;
+  margin-left: 19px;
+  font-size: 1.8rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: var(--bold);
+  line-height: 2.3rem;
+  color: var(--bitcoin-orage);
+  text-align: left;
+}
+.currency__container,
+.comissions__container {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+.currency__container table,
+.comissions__container table {
+  width: 100%;
+  height: 100%;
+}
+.currency__container td,
+.comissions__container td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: var(--medium);
+  line-height: 1.9rem;
+  color: var(--gray);
+  background-color: var(--just-white);
+  text-align: left;  
+  padding-left: 18px;
+}
+.currency__container .currency__top-left,
+.comissions__container .comissions__top-left {
+  border-radius: 15px 0 0 0;
+}
+.currency__container .currency__top-right,
+.comissions__container .comissions__top-right {
+  border-radius: 0 15px 0 0;
+}
+.currency__container .currency__bottom-left,
+.comissions__container .comissions__bottom-left {
+  border-radius: 0 0 0 15px;
+}
+.currency__container .currency__bottom-right,
+.comissions__container .comissions__bottom-right {
+  border-radius: 0 0 15px 0;
+}
+.currency__container .currency--right {
+  padding-left: 18px;
+  font-size: 1.4rem;
+  font-weight: var(--regular);
+  line-height: 1.7rem;
+  color: #757575;
+}
+.currency__container .trending-down {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  margin-left: 16px;
+  background-image: url('../assets/icons/trending-down.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.currency__container .trending-up {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  margin-left: 16px;
+  background-image: url('../assets/icons/trending-up.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.currency__date,
+.comissions__date {
+  width: 180px;
+  height: 30px;
+  margin: 15px auto 0;
+  padding: 8px;
+  background-color: var(--soft-orange);
+  border-radius: 8px;
+}
+.currency__date p
+.comissions__date p {
+  font-size: 1.2rem;
+  font-weight: var(--light);
+  line-height: 1.5rem;
+  color: var(--warm-black);
+}
+
+.comissions {
+  margin-top: 20px;
+}
+.comissions__table .comissions__title--blue {
+  color: #1A9AF7;
+}
+.comissions__container .comissions--right {
+  padding-left: 28px;
+  font-size: 1.4rem;
+  font-weight: var(--regular);
+  line-height: 1.7rem;
+  color: #757575;
+}
+.comissions__date--blue {
+  background-color: var(--soft-blue);
+}
