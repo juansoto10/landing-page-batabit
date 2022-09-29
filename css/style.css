@@ -150,6 +150,13 @@ main {
   margin-bottom: 48px;
 }
 
+.currency-comissions {
+  display:flex;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
 .currency {
   margin-bottom: 20px;
   height: auto;
@@ -157,30 +164,31 @@ main {
 
 .currency__table,
 .comissions__table {
+  position: relative;
+  scroll-snap-align: center;
   width: 70%;
   min-width: 235px;
   max-width: 500px;
   height: 360px;
   /* height: 360px; propuesto */
-  margin: 0 auto;
+  margin: 0 25px 0 38px;
   font-family: 'Inter', sans-serif;
 }
 .currency__table .currency__title,
 .comissions__table .comissions__title {
   margin-bottom: 14px;
-  margin-left: 19px;
   font-size: 1.8rem;
   font-family: 'DM Sans', sans-serif;
   font-weight: var(--bold);
   line-height: 2.3rem;
   color: var(--bitcoin-orage);
-  text-align: left;
+  text-align: center;
 }
 .currency__container,
 .comissions__container {
   width: 90%;
   min-width: 230px;
-  max-width: 300px;
+  max-width: 270px;
   height: 250px;
   margin: 0 auto;
 }
@@ -286,7 +294,7 @@ main {
   width: 100%;
   min-width: 320px;
   height: auto;
-  padding: 22px 10px 32px 10px;
+  padding: 22px 10px 45px 10px;
   background-color: var(--warm-black);
 }
 .product-detail__batabit-logo {
@@ -445,7 +453,7 @@ main {
   min-width: 195px;
   max-width: 300px;
   height: 256px;
-  margin: 50px 60px 0;
+  margin: 50px 40px 0;
   padding: 0 15px;
   background-color: var(--just-white);
   border-radius: 15px;
